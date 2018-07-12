@@ -21,7 +21,7 @@
 
         <property name="hbm2ddl.auto">create</property>
 
- 		<mapping class="com.FirstWeb.model.Location"/>
+ 		<mapping class="com.firstweb.model.Location"/>
  		 
     </session-factory>
 </hibernate-configuration>
