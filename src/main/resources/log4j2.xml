@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Properties>
+        <Property name="log-path">/home/lakshay</Property>
+    </Properties>
+    <Appenders>
+        <RollingFile name="RollingFile" fileName="${log-path}/FirstWeb.log"
+                     filePattern="${log-path}/FirstWeb.log-%i.log">
+            <PatternLayout>
+                <pattern>%d{dd/MMM/yyyy HH:mm:ss,SSS}- %c: %m%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="50 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="20"/>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Logger name="root" level="debug" additivity="false">
+            <appender-ref ref="RollingFile" level="info"/>
+        </Logger>
+    </Loggers>
+</Configuration>
+
